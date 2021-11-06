@@ -95,7 +95,9 @@
         <div class="grid">
             <h2>Don't <span>Thinik</span>, begin <span>today</span>!</h2>
             <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
-            <a href="#" class="btn-primary">become a member</a>
+            <div class="btn-wrapper">
+                <a href="#" class="btn-primary">become a member</a>
+            </div>
         </div>
     </section>
 
@@ -109,16 +111,16 @@
 
     <section id="schedules">
         <div class="grid">
-            <h2>classes <span>chedule</span></h2>
+            <h2>classes <span>schedule</span></h2>
             <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-            <ul>
+            <ul class="weekdays">
                 <li><a href="#">Monday</a></li>
                 <li><a href="#">Friday</a></li>
                 <li><a href="#">Thursday</a></li>
                 <li><a href="#">Wednesday</a></li>
                 <li><a href="#">Tuesday</a></li>
             </ul>
-            <ul class="grid">
+            <ul class="grid hours">
                 <li>Fitness Class</li>
                 <li>10:00AM - 11:30AM</li>
                 <li></li>
@@ -192,13 +194,13 @@
     <section id="contact">
         <div class="grid">
             <h2>Contact</h2>
-            <form>
-                <input type="text" placeholder="Your Name*">
-                <input type="email" placeholder="Your Email*">
-                <input type="text" placeholder="Subject">
-                <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="text" placeholder="Your Name*" class="name">
+            <input type="email" placeholder="Your Email*" class="email">
+            <input type="text" placeholder="Subject" class="subject">
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <div class="btn-wrapper">
                 <button class="btn-primary">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
 

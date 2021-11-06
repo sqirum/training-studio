@@ -1,8 +1,12 @@
-body, html, h1, h2, h3, h4, h5, h6 ul, li, a {
+body, html, h1, h2, h3, h4, h5, h6 ul, li, p, a, span {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   border: 0;
+}
+body::selection, html::selection, h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6 ul::selection, li::selection, p::selection, a::selection, span::selection {
+  color: white;
+  background: #ed563b;
 }
 
 * {
@@ -26,6 +30,14 @@ h2 {
 }
 h2 span {
   color: #ed563b;
+}
+h2::after {
+  content: "";
+  display: block;
+  background: url(/img/line-dec.png) no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 20px;
 }
 
 .btn-primary {
@@ -134,7 +146,7 @@ section#welcome .hero-text a:hover {
 }
 
 section#about {
-  padding: 5% 0;
+  padding: 10% 0;
 }
 section#about p {
   text-align: center;
@@ -169,4 +181,215 @@ section#about ul li .description p {
 section#about ul li .description a {
   text-decoration: none;
   color: #ed563b;
+}
+
+section#promotion {
+  background-image: url(/img/cta-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 5% 0;
+}
+section#promotion h2 {
+  color: white;
+  margin: 20px 0;
+}
+section#promotion h2::after {
+  display: none;
+}
+section#promotion p {
+  grid-column: 4/10;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+section#promotion .btn-wrapper {
+  grid-column: 1/13;
+  text-align: center;
+  margin: 20px 0;
+}
+section#promotion a {
+  text-decoration: none;
+}
+
+section#classes {
+  padding: 10% 0;
+}
+
+section#schedules {
+  padding: 10% 0;
+  background: url(/img/schedule-bg.jpg) no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+section#schedules h2 {
+  color: black;
+}
+section#schedules p {
+  color: white;
+  grid-column: 4/10;
+  margin: 20px 0;
+  text-align: center;
+}
+section#schedules ul.weekdays {
+  grid-column: 1/13;
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  padding: 0;
+}
+section#schedules ul.weekdays li::after {
+  content: "/";
+  display: inline-block;
+  color: white;
+  margin: 0 10px;
+}
+section#schedules ul.weekdays li a {
+  text-decoration: none;
+  color: white;
+}
+section#schedules ul.weekdays li a:hover {
+  color: #ed563b;
+  transition: all 0.5s ease;
+}
+section#schedules ul.hours {
+  width: 100%;
+  grid-column: 1/13;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+section#schedules ul.hours li {
+  grid-column: span 3;
+  color: white;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+section#experts {
+  padding: 5% 0;
+}
+section#experts p {
+  color: #7a7a7a;
+  grid-column: 4/10;
+  text-align: center;
+  margin: 50px 0;
+}
+section#experts ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  grid-column: 1/13;
+  list-style-type: none;
+  grid-gap: 20px;
+}
+section#experts ul li.expert-item {
+  grid-column: span 4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+section#experts ul li.expert-item img {
+  width: 100%;
+}
+section#experts ul li.expert-item h6 {
+  margin: 10px 0;
+  padding: 0;
+  color: #ed563b;
+}
+section#experts ul li.expert-item h3 {
+  margin: 10px 0;
+  padding: 0;
+}
+section#experts ul li.expert-item p {
+  text-align: left;
+  margin: 10px 0;
+  padding: 0;
+}
+section#experts ul li.expert-item ul {
+  display: flex;
+}
+section#experts ul li.expert-item ul a {
+  color: #ed563b;
+  text-decoration: none;
+  border-bottom: 1px solid white;
+}
+section#experts ul li.expert-item ul a:hover {
+  animation: underlineAnimation 0.5s running;
+}
+@keyframes underlineAnimation {
+  0% {
+    border-bottom: 1px solid white;
+  }
+  100% {
+    border-bottom: 1px solid #ed563b;
+  }
+}
+
+section#contact {
+  padding: 5% 0;
+}
+section#contact .grid {
+  width: 50%;
+  margin: 0 auto;
+}
+section#contact .grid h2 {
+  margin-bottom: 30px;
+}
+section#contact .grid input {
+  width: 100%;
+  outline: 0;
+  border: 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #e9e9e9;
+  margin: 10px 0;
+}
+section#contact .grid input.name {
+  grid-column: 1/5;
+}
+section#contact .grid input.email {
+  grid-column: 8/13;
+}
+section#contact .grid input.subject {
+  grid-column: span 12;
+}
+section#contact .grid textarea {
+  margin: 10px 0;
+  grid-column: span 12;
+  border: 0;
+  border-bottom: 3px solid #e9e9e9;
+  outline: 0;
+  resize: none;
+}
+section#contact .grid .btn-wrapper {
+  grid-column: 1/13;
+  text-align: end;
+}
+section#contact .grid .btn-wrapper button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border: 1px solid #ed563b;
+  justify-self: end;
+  margin: 10px 0;
+}
+section#contact .grid .btn-wrapper button:hover {
+  background: white;
+  color: #ed563b;
+  transition: all 0.5s ease;
+}
+
+footer {
+  padding: 5% 0;
+}
+footer p {
+  grid-column: 1/13;
+  text-align: center;
+  font-size: 14px;
 }
