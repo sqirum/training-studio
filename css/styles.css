@@ -27,6 +27,7 @@ h2 {
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 800;
+  margin-bottom: 40px;
 }
 h2 span {
   color: #ed563b;
@@ -222,6 +223,10 @@ section#classes p {
 }
 section#classes .mytabs {
   grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 25px;
+  margin-top: 60px;
 }
 section#classes .mytabs input[type=radio] {
   display: none;
@@ -230,41 +235,41 @@ section#classes .mytabs input[type=radio]:checked + label + .tab {
   display: block;
 }
 section#classes .mytabs label {
-  padding: 10px 20px;
+  padding: 30px 0;
   cursor: pointer;
+  grid-column: 1/4;
+  text-align: center;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
-section#classes .mytabs label.number1 {
-  background: #fff;
+section#classes .mytabs .btn {
+  grid-column: 1/4;
+  grid-row: 5/6;
+  width: 100%;
 }
-section#classes .mytabs label.number2 {
-  background: #C0C0C0;
-}
-section#classes .mytabs label.number3 {
-  background: #d4af37;
-}
-section#classes .mytabs label.number4 {
-  background: #ed563b;
+section#classes .mytabs .btn a {
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 4px;
+  padding: 20px 0;
 }
 section#classes .mytabs .tab {
   width: 100%;
-  padding: 20px;
   order: 1;
   display: none;
-}
-section#classes .mytabs .tab.number1 {
-  background: #fff;
-}
-section#classes .mytabs .tab.number2 {
-  background: #C0C0C0;
-}
-section#classes .mytabs .tab.number3 {
-  background: #d4af37;
-}
-section#classes .mytabs .tab.number4 {
-  background: #ed563b;
+  grid-column: 5/13;
+  grid-row: 1/6;
 }
 section#classes .mytabs .tab h3 {
   font-size: 1.5em;
+  margin: 20px 0;
+}
+section#classes .mytabs .tab p {
+  text-align: left;
+  margin: 20px 0;
 }
 
 section#schedules {
@@ -363,13 +368,15 @@ section#experts ul li.expert-item p {
   margin: 10px 0;
   padding: 0;
 }
-section#experts ul li.expert-item ul {
-  display: flex;
-}
 section#experts ul li.expert-item ul a {
   color: #ed563b;
   text-decoration: none;
   border-bottom: 1px solid white;
+  display: inline-block;
+  margin: 0 10px;
+}
+section#experts ul li.expert-item ul a:first-child {
+  margin-left: 0;
 }
 section#experts ul li.expert-item ul a:hover {
   animation: underlineAnimation 0.5s running;
